@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d7b18e6-0f17-4751-9754-e0db01bffd3d" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ActiveElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/PassiveElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/PathElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RouteProvider/RouteNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RouteProvider/RouteProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="3d7b18e6-0f17-4751-9754-e0db01bffd3d" name="Changes" comment="описал интерфейсы">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Cable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ErrorCreatePathElementException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ErrorMustBePresentIPAddressElementException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ErrorNoPossibilityConnectPathElementException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Firewall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Hub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/NetworkTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Pc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Router.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Switch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/ActiveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/ActiveElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Network.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/PassiveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/PassiveElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/PathElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/PathElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +81,14 @@
       <workItem from="1692454140172" duration="1216000" />
       <workItem from="1692455377239" duration="10000" />
       <workItem from="1692455418113" duration="236000" />
-      <workItem from="1692455673388" duration="1775000" />
+      <workItem from="1692455673388" duration="3028000" />
+      <workItem from="1692501692499" duration="878000" />
+      <workItem from="1692502622441" duration="16929000" />
+      <workItem from="1692523312553" duration="2535000" />
+      <workItem from="1692525958051" duration="1165000" />
+      <workItem from="1692527257226" duration="386000" />
+      <workItem from="1692527711797" duration="20873000" />
+      <workItem from="1692552261225" duration="2855000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692454448679</created>
@@ -89,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692455151217</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="описал интерфейсы">
+      <created>1692458448700</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692458448700</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="описал интерфейсы" />
+    <option name="LAST_COMMIT_MESSAGE" value="описал интерфейсы" />
   </component>
 </project>

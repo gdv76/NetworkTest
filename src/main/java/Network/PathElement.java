@@ -8,4 +8,5 @@ public interface PathElement {
     public Collection<PathElement> getConnections();
     public String getInfo();
     public Integer getID();
+    public void connect(PathElement device) throws ErrorNoPossibilityConnectPathElementException;
 }
