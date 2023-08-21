@@ -1,9 +1,10 @@
 package Network;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Cable implements PassiveElement{
+public class Cable implements PassiveElement, Serializable {
     private Double len;
     private PathElement b;
     private PathElement e;
@@ -21,6 +22,8 @@ public class Cable implements PassiveElement{
         this.description = description;
         this.id = hashCode();
     }
+
+    // Проверка элемента сети newCable на дубликат
     public Boolean isDublicatCabel(Cable newCable) {
         PathElement bNetElement = null;
         PathElement eNetElement = null;
@@ -61,7 +64,7 @@ public class Cable implements PassiveElement{
     public Integer getID() {
         return this.id;
     }
-
+    // Подключаем сетевое устройство к концу кабеля
     @Override
     public void connect(PathElement device) throws ErrorNoPossibilityConnectPathElementException {
         if (device == null) {
@@ -80,8 +83,8 @@ public class Cable implements PassiveElement{
                 "description='" + description + '\'' +
                 ", id=" + id +
                 ", len=" + len +
-                ", b=[" + b.toString() + "]" +
-                ", e=[" + e.toString() + "]" +
+                ", b=[" + b + "]" +
+                ", e=[" + e + "]" +
                 ", timeDelay=" + timeDelay +
                 '}';
     }

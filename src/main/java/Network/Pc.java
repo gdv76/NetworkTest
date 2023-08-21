@@ -1,9 +1,10 @@
 package Network;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Pc implements ActiveElement{
+public class Pc implements ActiveElement, Serializable {
     private String description;
 
     private PathElement pathElement;
@@ -52,6 +53,7 @@ public class Pc implements ActiveElement{
 
     @Override
     public Collection<PathElement> getConnections() {
+        if (pathElement == null) return null;
         ArrayList<PathElement> netPathElements = new ArrayList<PathElement>();
         netPathElements.add(pathElement);
         return netPathElements;
@@ -69,10 +71,16 @@ public class Pc implements ActiveElement{
 
     @Override
     public String toString() {
+        String connectionsInfo = "";
+        if (pathElement != null) {
+            connectionsInfo = "class='" + pathElement.getClass().getSimpleName() + '\''+ ", description='" + pathElement.getInfo() + '\'' +  ", id=" + pathElement.getID();
+        } else {
+            connectionsInfo = "not connections";
+        }
         return "Pc{" +
                 "description='" + description + '\'' +
                 ", id=" + id +
-                ", pathElement=[" + "class='" + pathElement.getClass().getSimpleName() + '\'' + ", description='" + pathElement.getInfo() + '\'' +  ", id=" + pathElement.getID() +
+                ", pathElement=[" + connectionsInfo  +
                 "], ip=" + ip +
                 '}';
     }

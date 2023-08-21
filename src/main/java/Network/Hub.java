@@ -1,10 +1,11 @@
 package Network;
 
+import java.io.Serializable;
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Hub implements PassiveElement{
+public class Hub implements PassiveElement, Serializable {
     private String description;
     private Integer cntPorts;
     private ArrayList<PathElement> connections;
@@ -65,18 +66,21 @@ public class Hub implements PassiveElement{
 
     @Override
     public String toString() {
-        String conDevices = "";
-        for (PathElement pe:connections) {
-            conDevices += "class='" + pe.getClass().getSimpleName() + '\'' + ", description='" + pe.getInfo() + '\'' +  ", id=" + pe.getID() + "; ";
+        String connectionsInfo = "";
+        if (connections != null) {
+            for (PathElement pe:connections) {
+                connectionsInfo += "class='" + pe.getClass().getSimpleName() + '\'' + ", description='" + pe.getInfo() + '\'' +  ", id=" + pe.getID() + "; ";
+            }
+        } else {
+            connectionsInfo = "not connections";
         }
-
         return "Hub{" +
                 "description='" + description + '\'' +
                 ", id=" + id +
                 ", cntPorts=" + cntPorts +
                 ", timeDelay=" + timeDelay +
                 ", cost=" + cost +
-                ", connections=[" + conDevices + "]"+
+                ", connections=[" + connectionsInfo + "]"+
                 '}';
     }
 }

@@ -4,24 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d7b18e6-0f17-4751-9754-e0db01bffd3d" name="Changes" comment="описал интерфейсы">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Cable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ErrorCreatePathElementException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ErrorMustBePresentIPAddressElementException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/ErrorNoPossibilityConnectPathElementException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Firewall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Hub.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/NetworkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Pc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Router.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Network/Switch.java" afterDir="false" />
+    <list default="true" id="3d7b18e6-0f17-4751-9754-e0db01bffd3d" name="Changes" comment="Построил сеть и создал механизм просмотра карты сети.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Route/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RouteProvider/Provider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/ActiveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/ActiveElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Cable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Cable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Hub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Hub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/PassiveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/PassiveElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/PathElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/PathElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/NetworkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/NetworkTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Pc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Pc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Switch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +64,40 @@
       <recent name="RouteProvider" />
     </key>
   </component>
+  <component name="RunManager" selected="Application.Route">
+    <configuration name="NetworkTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Network.NetworkTest" />
+      <module name="NetworkTest.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Network.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Route" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="9" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Route.Route" />
+      <module name="NetworkTest.main" />
+      <option name="PROGRAM_PARAMETERS" value="mynetwork RouteProvider.Provider 1013423070 1013423070" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Route" />
+      <item itemvalue="Application.NetworkTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.NetworkTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +116,10 @@
       <workItem from="1692525958051" duration="1165000" />
       <workItem from="1692527257226" duration="386000" />
       <workItem from="1692527711797" duration="20873000" />
-      <workItem from="1692552261225" duration="2855000" />
+      <workItem from="1692552261225" duration="3037000" />
+      <workItem from="1692591012860" duration="2638000" />
+      <workItem from="1692593736451" duration="283000" />
+      <workItem from="1692594272154" duration="22660000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692454448679</created>
@@ -111,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692458448700</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Построил сеть и создал механизм просмотра карты сети.">
+      <created>1692555196425</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1692555196425</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +169,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="описал интерфейсы" />
-    <option name="LAST_COMMIT_MESSAGE" value="описал интерфейсы" />
+    <MESSAGE value="Построил сеть и создал механизм просмотра карты сети." />
+    <option name="LAST_COMMIT_MESSAGE" value="Построил сеть и создал механизм просмотра карты сети." />
   </component>
 </project>

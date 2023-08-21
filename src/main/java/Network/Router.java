@@ -1,9 +1,10 @@
 package Network;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Router implements ActiveElement,Firewall{
+public class Router implements ActiveElement,Firewall, Serializable {
     private String description;
     private ArrayList<PathElement> connections;
     private Double timeDelay;
@@ -82,21 +83,25 @@ public class Router implements ActiveElement,Firewall{
 
     @Override
     public String toString() {
-        String conDevices = "";
-        for (PathElement pe:connections) {
-            conDevices += "class='" + pe.getClass().getSimpleName() + '\'' + ", description='" + pe.getInfo() + '\'' +  ", id=" + pe.getID() + "; ";
+        String connectionsInfo = "";
+        if (connections != null) {
+            for (PathElement pe:connections) {
+                connectionsInfo += "class='" + pe.getClass().getSimpleName() + '\'' + ", description='" + pe.getInfo() + '\'' +  ", id=" + pe.getID() + "; ";
+            }
+        } else {
+            connectionsInfo = "not connections";
         }
-
         return "Router{" +
                 "description='" + description + '\'' +
                 ", id=" + id +
                 ", timeDelay=" + timeDelay +
                 ", cost=" + cost +
                 ", ipList=" + ipList +
-               ", connections=[" + conDevices + "]" +
+               ", connections=[" + connectionsInfo + "]" +
                 '}';
     }
 
+    // Проверка на допустипость получения пакетов с определенных адресов (Firewall)
     @Override
     public Boolean isConnectionAllowed(IPAddress ip) {
         Boolean checkResult = true;

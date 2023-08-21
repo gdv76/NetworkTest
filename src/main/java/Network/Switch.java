@@ -1,9 +1,10 @@
 package Network;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Switch implements ActiveElement{
+public class Switch implements ActiveElement, Serializable {
     private String description;
     private ArrayList<PathElement> connections;
     private Double timeDelay;
@@ -75,11 +76,14 @@ public class Switch implements ActiveElement{
 
     @Override
     public String toString() {
-        String conDevices = "";
-        for (PathElement pe:connections) {
-            conDevices += "class='" + pe.getClass().getSimpleName() + '\'' + ", description='" + pe.getInfo() + '\'' +  ", id=" + pe.getID() + "; ";
+        String connectionsInfo = "";
+        if (connections != null) {
+            for (PathElement pe:connections) {
+                connectionsInfo += "class='" + pe.getClass().getSimpleName() + '\'' + ", description='" + pe.getInfo() + '\'' +  ", id=" + pe.getID() + "; ";
+            }
+        } else {
+            connectionsInfo = "not connections";
         }
-
         return "Switch{" +
                 "description='" + description + '\'' +
                 ", id=" + id +
@@ -87,7 +91,7 @@ public class Switch implements ActiveElement{
                 ", cost=" + cost +
                 ", cntPorts=" + cntPorts +
                 ", ipList=" + ipList +
-                ", connections=[" + conDevices + "]" +
+                ", connections=[" + connectionsInfo + "]" +
                 '}';
     }
 }

@@ -1,10 +1,16 @@
 package Network;
 
+import RouteProvider.Provider;
+import RouteProvider.RouteNotFoundException;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+
 
 public class NetworkTest {
-    public static void main(String[] args) throws ErrorCreatePathElementException {
+    public static void main(String[] args) throws ErrorCreatePathElementException, IOException, ClassNotFoundException {
        Network network = new Network("СК");
 
        PathElement networkDevice1 = network.add(new Router("Zyxel Keenetic Giga3",1D,1D,new ArrayList<IPAddress>(Arrays.asList(new IPAddress("192.168.0.1"),new IPAddress("0.0.0.0")))));
@@ -25,6 +31,8 @@ public class NetworkTest {
        PathElement networkDevice15 = network.add(new Pc("ColibriUser",new IPAddress("192.168.0.24")));
        PathElement networkDevice16 = network.add(new Pc("ColibriPC4",new IPAddress("192.168.0.25")));
        PathElement networkDevice17 = network.add(new Pc("Ноутбук Acer",new IPAddress("192.168.0.26")));
+
+       PathElement networkDevice18 = network.add(new Pc("Test",new IPAddress("192.168.0.99")));
 
        try {
           network.addCable(new Cable("1",1D,1D,networkDevice1,networkDevice2));
@@ -52,19 +60,64 @@ public class NetworkTest {
           e.printStackTrace();
           return;
        }
+// Сериализация Network
+       try{
+          FileOutputStream writeData = new FileOutputStream("mynetwork.dat");
+          ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
+
+          writeStream.writeObject(network);
+          writeStream.flush();
+          writeStream.close();
+
+       }catch (IOException e) {
+          e.printStackTrace();
+       }
+// Десериализация - востановление объентов
+       try{
+          FileInputStream readData = new FileInputStream("mynetwork.dat");
+          ObjectInputStream readStream = new ObjectInputStream(readData);
+
+          Network network1 = (Network) readStream.readObject();
+          readStream.close();
+
+          System.out.println("Network1" + '\n');
+          network1.netInfo();
+
+       }catch (Exception e) {
+          e.printStackTrace();
+       }
+
 
 // отражаем элементы сети через toString
 //       System.out.println(network);
 
-// Выводим узел и ближайшие к нему элементы
-       for(PathElement p:network.getPathElements().values()) {
-          if (!(p instanceof Cable)) {
-             System.out.println(p.toString() + '\n');
-            for(PathElement c:network.findListNearestNetworkDevice(p)) {
-               System.out.println("     - " + c.toString() + '\n');
-            }
+
+
+       Provider provider = new Provider();
+
+       System.out.println("Маршрут (" + provider.getClass()  + ")" + '\n');
+       LinkedList<PathElement> routeByNet = null;
+
+
+
+       try {
+          //   routeByNet = provider.findPathToNetworkDevice(network,networkDevice1,networkDevice17);
+          routeByNet = (LinkedList<PathElement>) provider.getRoute(networkDevice1.getID(), networkDevice18.getID(), network);
+
+          if (routeByNet == null) {
+             System.out.println("Маршрут не найден. Устройство не подключено в сеть");
+          } else {
+             for(PathElement pe:routeByNet) {
+                System.out.println(pe);
+             }
           }
+
+       } catch (RouteNotFoundException ex) {
+          System.out.println("Маршрут не найден. Устройство не подключено в сеть [RouteNotFoundException]");
+       }  catch (IllegalArgumentException ex) {
+          System.out.println("Некорректные агрументы метода поиска маршрута");
        }
+
 
     }
 }
