@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d7b18e6-0f17-4751-9754-e0db01bffd3d" name="Changes" comment="Построил сеть и создал механизм просмотра карты сети.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Route/Route.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RouteProvider/Provider.java" afterDir="false" />
+    <list default="true" id="3d7b18e6-0f17-4751-9754-e0db01bffd3d" name="Changes" comment="Добавил функционал построения маршрута между двумя узлами сети">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Cable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Cable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Hub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Hub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/IPAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/NetworkTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/NetworkTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Pc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Pc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Network/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Network/Switch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +109,8 @@
       <workItem from="1692552261225" duration="3037000" />
       <workItem from="1692591012860" duration="2638000" />
       <workItem from="1692593736451" duration="283000" />
-      <workItem from="1692594272154" duration="22660000" />
+      <workItem from="1692594272154" duration="22877000" />
+      <workItem from="1692674200955" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692454448679</created>
@@ -149,7 +140,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692555196425</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавил функционал построения маршрута между двумя узлами сети">
+      <created>1692622516335</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1692622516336</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавил функционал построения маршрута между двумя узлами сети">
+      <created>1692622532640</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1692622532640</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +175,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="описал интерфейсы" />
     <MESSAGE value="Построил сеть и создал механизм просмотра карты сети." />
-    <option name="LAST_COMMIT_MESSAGE" value="Построил сеть и создал механизм просмотра карты сети." />
+    <MESSAGE value="Добавил функционал построения маршрута между двумя узлами сети" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил функционал построения маршрута между двумя узлами сети" />
   </component>
 </project>

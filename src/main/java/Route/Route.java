@@ -59,7 +59,7 @@ public class Route {
         } else {
             System.out.println("Незаданы аргументы команды route");
             System.out.println("Формат команды:");
-            System.out.println("route <network>, <provider>, <id1>, <id2>");
+            System.out.println("route <network> <provider> <id1> <id2>");
         }
     }
 }
